@@ -3,7 +3,7 @@
 #include <sys/wait.h>
 
 char* arguments[] = {"ls", NULL};
-char* args[] = {"ls","df", "ps", "pwd"};
+char* args[] = {"ls","df", "ps", "pwd"};  // to fix the program I only added "ls" to args[]
 
 int main(int argc, char const *argv[]) {
   int i = 0;
