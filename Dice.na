@@ -1,0 +1,57 @@
+"Please enter 2 numbers:"
+inc 12  # reserve space for three variables 
+
+lit 0
+lit 23
+lit 24
+out 2
+out 3
+
+la 0 32
+la 0 36
+in 0
+out 3  # added for a better structure
+
+la 0 40
+la 0 46
+in 0
+out 3  # added for a better structure
+
+lv 0 32  
+lv 0 36
+rel 2
+tjmp .iftrue  # if it is true
+lv 0 32
+lv 0 36
+rel 2
+fjmp .iffalse  # if it is false 
+
+.iftrue
+la 0 40
+lv 0 32
+lv 0 36
+add
+lit 2
+mul
+sto
+jmp .ergebnis
+
+.iffalse
+la 0 40
+lv 0 32
+lv 0 36
+add
+sto
+jmp .ergebnis
+
+
+.ergebnis
+lit 18
+lit 9
+lit 9
+out 2
+
+lv 0 40
+out 0
+
+halt
