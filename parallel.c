@@ -3,7 +3,7 @@
 #include <sys/wait.h>
 
 char* arguments[] = {"ls", NULL};
-char* args[] = {"df", "ps", "pwd"};
+char* args[] = {"ls","df", "ps", "pwd"};
 
 int main(int argc, char const *argv[]) {
   int i = 0;
@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]) {
 
       printf("fail");
     }
-    else{
+else{
       int status;
       waitpid(-1, &status, 0);
     }
